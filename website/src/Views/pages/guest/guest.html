@@ -1,0 +1,67 @@
+{{ include('./Components/header.html') }}
+
+<main>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="dashboard-header-title">
+        <h1 class="dashboard-title">Guest Dashboard</h1>
+        <form action="/dashboard" method="get">
+          <button
+            class="dashboard-button logout-button"
+            type="submit"
+            aria-label="Logout"
+          >
+            Login/Sign Up
+          </button>
+        </form>
+      </div>
+      <div class="dashboard-actions">
+        <button
+          class="dashboard-button"
+          type="button"
+          aria-label="Book Reservations"
+          id="book-reservations"
+        >
+          Book Reservations
+        </button>
+      </div>
+    </header>
+    <p id="welcome-username" aria-label="welcome-username">{{ welcome }}</p>
+    <nav class="dashboard-tabs" role="tablist">
+      <button
+        class="dashboard-tab active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="upcoming-services"
+      >
+        Upcoming Services
+      </button>
+    </nav>
+
+    <!-- Upcoming services -->
+    <section
+      id="upcoming-services"
+      role="tabpanel"
+      aria-labelledby="upcoming-services-tab"
+      style="display: block"
+    >
+      <table class="reservations-table" aria-label="Upcoming Services">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Service</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+            <th scope="col">Tables Avaliable</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    {{ include('./Components/bookReservationDialog.html') }}
+    {{ include('./Components/confirmationDialog.html') }}
+  </div>
+</main>
+
+{{ include('./Components/footer.html') }}

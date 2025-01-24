@@ -1,0 +1,92 @@
+{{ include('./Components/header.html') }}
+
+<main class="contact-main" aria-labelledby="contact-heading" role="main">
+  <!-- Get in Touch Section -->
+  <div class="contact-get-in-touch" aria-labelledby="get-in-touch-heading">
+    <div class="get-in-touch-content">
+      <h1 id="get-in-touch-heading">Get in Touch</h1>
+      <div class="contact-links">
+        <a
+          href="mailto:marketing@lancasters.com"
+          aria-label="Email for collaborations"
+        >
+          For collaborations: marketing@lancasters.com
+        </a>
+        <a
+          href="mailto:office@lancasters.com"
+          aria-label="Email for business opportunities"
+        >
+          For business opportunities: office@lancasters.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact and Reservation Forms -->
+  <div class="contact-container">
+    <section class="contact-forms" aria-labelledby="contact-forms-heading">
+      <!-- Contact Form -->
+      <div
+        class="form-wrapper contact-form"
+        aria-labelledby="contact-form-heading"
+        role="form"
+      >
+        <h2 id="contact-form-heading">Contact Us</h2>
+        <form id="contactForm" aria-describedby="contact-form-description">
+          <p id="contact-form-description" class="visually-hidden">
+            Use this form to send a message to our team.
+          </p>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" aria-label="Send Message">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+{{ include('./Components/footer.html') }}

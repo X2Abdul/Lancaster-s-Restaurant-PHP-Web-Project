@@ -1,0 +1,59 @@
+<!-- Booking Confirmation Dialog -->
+<div
+  id="booking-confirmation-dialog"
+  class="dialog"
+  role="dialog"
+  aria-labelledby="booking-confirmation-heading"
+  aria-hidden="true"
+>
+  <div class="dialog-content">
+    <h2 id="booking-confirmation-heading">Reservation Confirmation</h2>
+
+    <div class="booking-details">
+      <p>
+        Thank you <strong>{{ username }}</strong> for booking a reservation at
+        Lancasters.
+      </p>
+      <p id="login-message"></p>
+    </div>
+    <div class="booking-details">
+      <h3>Booking Details:</h3>
+      <p><strong>Name:</strong> {{ username }}</p>
+      <p><strong>Email:</strong> {{ userEmail }}</p>
+      <p><strong>Service:</strong> {{ bookingService }}</p>
+      <p><strong>Date:</strong> {{ bookingDate }}</p>
+      <p><strong>Time:</strong> {{ bookingTime }}</p>
+      <p><strong>Party Size:</strong> {{ bookingPartySize }}</p>
+      <p><strong>Tables Assigned:</strong> {{ bookingTablesAssigned }}</p>
+    </div>
+    <div class="confirmation-dialog-buttons">
+      <div class="dialog-actions confirmation-dialog-actions">
+        <button
+          type="button"
+          class="dashboard-button add-to-calendar-button"
+          aria-label="Add to Calendar"
+          onclick="addToCalendar('{{ username }}', '{{ bookingDate }}', '{{ bookingTime }}')"
+        >
+          Add to Calendar
+        </button>
+        <button
+          type="button"
+          class="dashboard-button confirmation-email-button"
+          aria-label="Send Confirmation Email"
+          onclick="sendConfirmationEmail('{{ username }}', '{{ bookingDate }}', '{{ bookingTime }}', '{{ bookingService }}', '{{ bookingPartySize }}', '{{ bookingTablesAssigned }}', '{{ userEmail }}')"
+        >
+          Confirmation Email
+        </button>
+      </div>
+      <button
+        id="close-confirmation-dialog"
+        type="button"
+        class="dashboard-button cancel-button"
+        aria-label="close"
+        onclick="handleConfirmationClose()"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>

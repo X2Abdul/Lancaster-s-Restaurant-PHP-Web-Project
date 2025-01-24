@@ -1,0 +1,208 @@
+/* Dashboard Styles */
+.dashboard-main {
+  min-height: calc(100vh - 200px);
+}
+
+.dashboard-header {
+  color: #4c1a1a;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.dashboard-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.dashboard-header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-header-content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Form Layout */
+.dashboard-forms {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-wrapper h2 {
+  color: #4c1a1a;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Form Inputs */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4c1a1a;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4c1a1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #3a1414;
+  transform: translateY(-2px);
+}
+
+/* Toggle Button */
+.toggle-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  color: #4c1a1a;
+  border: 2px solid #4c1a1a;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.toggle-btn:hover {
+  background-color: #4c1a1a;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Guest Booking Section */
+.guest-booking {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.guest-btn {
+  padding: 1rem 2.5rem;
+  background-color: #e6b325;
+  color: #4c1a1a;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.guest-btn:hover {
+  background-color: #f4c542;
+  transform: translateY(-2px);
+}
+
+.error-box {
+  display: none;
+  color: red;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: #ffe6e6;
+  margin-top: 10px;
+}
+
+.error-box .success {
+  color: green;
+  border: 1px solid green;
+  background-color: #ffe6e6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-wrapper {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 3rem 0;
+  }
+
+  .dashboard-header-content h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-forms {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header-content h1 {
+    font-size: 1.75rem;
+  }
+  s .dashboard-container {
+    padding: 1rem;
+  }
+
+  .guest-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+}
