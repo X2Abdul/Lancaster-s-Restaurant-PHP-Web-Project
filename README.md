@@ -1,5 +1,5 @@
 # Lancaster's Restaurant Website - Setup Guide
-I would recommend to open this README.md in a proper readme preview such as https://markdownlivepreview.com/ for better experience.
+
 
 ## About the Website
 Lancaster's Restaurant website consists of two main parts:
